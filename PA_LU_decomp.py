@@ -92,24 +92,27 @@ def solve_upper_triangular(U, y):
     return x
 
 
-# Пример использования
-A = np.array([[-1, -5,  1], 
-              [-1,  1,  1], 
-              [-4, -1, -2]], dtype=np.float32)
 
-b = np.array([1, -2, 0], dtype=np.float32)
+def main():
+    # Пример использования
+    A = np.array([[-1, -5,  1], 
+                [-1,  1,  1], 
+                [-4, -1, -2]], dtype=np.float32)
 
-x, P, L, U = lu_solve(A, b)
+    b = np.array([1, -2, 0], dtype=np.float32)
+
+    x, P, L, U = lu_solve(A, b)
+
+    # Проверка
+    Ax_b = np.dot(A, x) - b
+
+    print("Матрица A:\n", A)
+    print("Решение x:", x)
+    print("Матрица перестановки P:\n", P)
+    print("Нижнетреугольная матрица L:\n", L)
+    print("Верхнетреугольная матрица U:\n", U)
+    print("Проверка A*x - b:\n", Ax_b)
 
 
-# Проверка
-Ax_b = np.dot(A, x) - b
-
-print("Матрица A:\n", A)
-print("Решение x:", x)
-print("Матрица перестановки P:\n", P)
-print("Нижнетреугольная матрица L:\n", L)
-print("Верхнетреугольная матрица U:\n", U)
-print("Проверка A*x - b:\n", Ax_b)
-
-
+if __name__ == "__main__":
+    main()
