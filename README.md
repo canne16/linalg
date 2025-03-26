@@ -7,3 +7,7 @@
 ## Разложение PA = LU для обращения матрицы
 
 - Inverse_via_LU.py
+
+## $LDM^T$-разложение
+
+- LDMt_decomp.py
