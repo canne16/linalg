@@ -3,9 +3,9 @@ import numpy as np
 def ldmt_decomposition(A):
     A = np.array(A, dtype=float)
     n = A.shape[0]
-    L = np.zeros((n, n))
-    D = np.zeros((n, n))
-    M = np.zeros((n, n))
+    L = np.eye(n)
+    D = np.eye(n)
+    M = np.eye(n)
 
     for j in range(n):
         v = A[:j+1, j].copy()
