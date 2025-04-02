@@ -52,14 +52,16 @@ def main():
                   [1, 7, 9]])
 
     L, D, M_T = ldmt_decomposition(A)
+
     print("Матрица A:\n", A)
     print("Матрица L:\n", L)
     print("Матрица D:\n", D)
     print("Матрица M.T:\n", M_T)
 
-    print("L*D*Mt:\n", L@D@M_T)
+    if L is not None:
+        print("L*D*M^T:\n", L @ D @ M_T)
 
-    print("Матрица A положительно определенная?", "Да" if is_positive_definite(A) else "Нет")
+    print("Матрица A положительно определенная?", "Да\n" if is_positive_definite(A) else "Нет\n")
 
 
 if __name__ == "__main__":
