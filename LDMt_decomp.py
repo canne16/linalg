@@ -32,10 +32,6 @@ def ldmt_decomposition(A):
         for j in range(i + 1, n):
             M[i, j] = A[i, j]
 
-    for i in range(n):
-        L[i, i] = 1.0
-        M[i, i] = 1.0
-
     return L, D, M
 
 
