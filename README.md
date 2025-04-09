@@ -14,4 +14,4 @@
 
 ## Разложение Холецкого
 
-- hol_decomp.py
+- chol_decomp.py
