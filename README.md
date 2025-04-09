@@ -11,3 +11,7 @@
 ## $LDM^T$-разложение
 
 - LDMt_decomp.py
+
+## Разложение Холецкого
+
+- hol_decomp.py
