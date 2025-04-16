@@ -43,9 +43,9 @@ def is_positive_definite(A):
 
 
 def main():
-    A = np.array([[4, 2, 0],
-                  [2, 5, 3],
-                  [1, 7, 9]])
+    A = np.array([[4, 3, 1],
+                  [2, 5, 2],
+                  [1, 1, 9]])
 
     L, D, M_T = ldmt_decomposition(A)
 
